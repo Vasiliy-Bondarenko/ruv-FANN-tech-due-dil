@@ -2,6 +2,7 @@
 
 **Date**: July 4, 2025  
 **Repository**: [ruvnet/ruv-FANN](https://github.com/ruvnet/ruv-FANN)  
+**Commit Analyzed**: [`63af591`](https://github.com/ruvnet/ruv-FANN/commit/63af59126161a2084f1b283e7f455b04b714d382)  
 **Assessment Type**: Security vulnerability analysis  
 **Severity**: **CRITICAL**  
 
