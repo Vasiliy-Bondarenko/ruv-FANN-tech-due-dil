@@ -167,8 +167,6 @@ However, the **significant discrepancies between marketing claims and actual fun
 
 8. **[FANN vs Modern Libraries Comparison](./assessments/fann-vs-modern-models-analysis.md)** - Competitive positioning analysis against established alternatives
 
-9. **[Live Testing Proposals](./assessments/live-test-proposals.md)** - Comprehensive validation framework for functional components
-
-10. **[Issue Handling Assessment](./assessments/issue-handling-assessment.md)** - Analysis of project maintainer responses to critical bug reports revealing systematic avoidance of technical problem resolution
+9. **[Issue Handling Assessment](./assessments/issue-handling-assessment.md)** - Analysis of project maintainer responses to critical bug reports revealing systematic avoidance of technical problem resolution
 
 Each assessment includes specific code references, line-by-line analysis, and reproducible verification steps for independent validation by technical specialists.
