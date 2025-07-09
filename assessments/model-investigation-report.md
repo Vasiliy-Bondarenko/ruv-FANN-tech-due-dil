@@ -57,7 +57,7 @@ model.fit(&training_data)?;
 let predictions = model.predict(&input_data)?;
 ```
 
-**Trading Suitability**: GOOD for data with clear seasonal patterns
+**Forecasting Suitability**: GOOD for data with clear seasonal patterns
 
 ### PatchTST - MISSING IMPLEMENTATION ❌
 
@@ -113,37 +113,17 @@ let predictions = model.predict(&input_data)?;
 - Enum variants for missing models
 - Discovery system lists unavailable models
 
-## 📈 Impact on Trading Applications
+## 📈 Impact on Forecasting Applications
 
-### Currently Usable for Trading:
+### Currently Usable for Forecasting:
 - **DLinear**: Good for seasonal patterns
 - **Basic models**: MLP, NLinear (if implemented)
 - **Some RNN models**: LSTM, GRU (status unknown)
 
-### Missing Critical Trading Models:
+### Missing Critical Forecasting Models:
 - **PatchTST**: Essential for complex pattern recognition
 - **StemGNN**: Required for multi-asset correlation modeling
 - **Advanced transformers**: Needed for high-frequency trading
-
-## 🔧 Recommendations
-
-### Immediate Actions:
-1. **Audit README claims** - Remove or clearly mark unimplemented models
-2. **Implement PatchTST** - High priority for transformer capabilities
-3. **Create implementation roadmap** - Prioritize by trading use cases
-4. **Fix registry system** - Remove references to non-existent models
-
-### Medium-term Goals:
-1. **Implement StemGNN** - Requires graph neural network foundation
-2. **Complete transformer suite** - FedFormer, iTransformer
-3. **Add comprehensive testing** - For all implemented models
-4. **Create usage examples** - Real trading scenarios
-
-### Long-term Vision:
-1. **Build graph neural network foundation** - Enable StemGNN and related models
-2. **Add ensemble methods** - Combine multiple models
-3. **Implement AutoML** - Automatic model selection
-4. **Add streaming capabilities** - Real-time trading integration
 
 ## 📋 Investigation Status
 
@@ -365,27 +345,6 @@ This is equivalent to a table of contents listing "Chapter 5: StemGNN Implementa
 2. **❌ Sophisticated Facades**: Complex-looking but fundamentally broken
 3. **🚨 Type Alias Fakes**: Minimal effort deception
 
-## 🎯 **TRADING APPLICATION RECOMMENDATIONS**
-
-### **IMMEDIATELY USABLE (2 models)**
-- **NLinear**: Excellent for trend-following and simple pattern recognition
-- **RNN**: Ideal for complex temporal patterns and multi-step forecasting
-
-### **DO NOT USE (4+ models)**
-- **DLinear**: Cannot compile, placeholder training logic
-- **MLP**: Cannot compile, missing dependencies
-- **LSTM/GRU**: Not real implementations, just RNN aliases
-- **StemGNN, PatchTST, etc.**: Missing implementation files
-
-### **LIVE TESTING REQUIRED**
-Before deploying any model for trading:
-1. **Synthetic data validation** - Verify pattern recognition capability
-2. **Historical financial data testing** - Validate on real market data
-3. **Baseline comparisons** - Ensure outperformance of simple methods
-4. **Robustness testing** - Stress test with market crashes and data quality issues
-
-📋 **Comprehensive Test Suite**: See `live-test-proposals.md`
-
 ## 📊 **PROJECT REALITY ASSESSMENT**
 
 ### **Original Claims vs Reality**
@@ -398,53 +357,6 @@ Before deploying any model for trading:
 - **Production Ready**: 11.7% (2/17 claimed models)
 - **Broken but Fixable**: 11.7% (DLinear, MLP could be fixed)
 - **Missing/Fake**: 76.6% (most claimed models don't exist)
-
-### **Development Pattern**
-Evidence suggests **inconsistent development** with multiple contributors:
-- **High-skill developers**: Created NLinear and RNN (excellent quality)
-- **Intermediate developers**: Created sophisticated facades (DLinear, MLP)
-- **Minimal effort**: Type aliases for LSTM/GRU
-
-## 🚨 **CRITICAL WARNINGS FOR TRADERS**
-
-### **High-Risk Models to Avoid**
-1. **DLinear**: Widely documented but completely broken
-2. **MLP**: Appears sophisticated but cannot compile
-3. **Any "transformer" models**: Missing implementation files
-4. **LSTM/GRU**: Not real implementations
-
-### **Due Diligence Required**
-- **Test extensively** before any live deployment
-- **Validate on your specific data** and timeframes
-- **Compare against simple baselines** (moving averages, ARIMA)
-- **Implement proper risk management** regardless of model choice
-
-## 📈 **SUCCESS PATH FOR TRADING**
-
-### **Phase 1: Validation (Recommended)**
-1. Start with **NLinear** for simple trend following
-2. Test **RNN** for complex pattern recognition
-3. Run comprehensive test suite from `live-test-proposals.md`
-
-### **Phase 2: Production Deployment**
-1. Only deploy models that pass ALL tests
-2. Start with small position sizes
-3. Monitor performance continuously
-4. Have fallback strategies ready
-
-### **Phase 3: Expansion (Future)**
-1. Fix broken models (DLinear, MLP) by implementing missing utilities
-2. Implement actual LSTM/GRU models
-3. Add proper transformer implementations
-
-## 🔄 Updated Next Steps
-
-1. ✅ **Complete Investigation** - Verified 4 critical models, identified patterns
-2. ✅ **Documentation Created** - Comprehensive reports and test proposals
-3. **RECOMMENDED**: Focus on NLinear and RNN for trading applications
-4. **OPTIONAL**: Verify remaining models (lower priority given pattern found)
-5. **CRITICAL**: Run live tests before any trading deployment
-
 ---
 
 ## 🎯 **FINAL CONCLUSION**
@@ -454,10 +366,8 @@ The ruv-FANN project represents a **mixed-quality implementation** with genuine 
 **Key Insights:**
 - **NOT a complete facade**: Some models are genuinely functional
 - **Quality varies dramatically**: From excellent to completely broken
-- **Documentation can be misleading**: Well-documented doesn't mean functional
+- **Documentation is misleading**: Well-documented doesn't mean functional
 - **Verification is essential**: Cannot trust claims without code inspection
-
-**For trading applications**: Start with NLinear or RNN, test thoroughly, and maintain appropriate skepticism about additional models until individually verified.
 
 ---
 
