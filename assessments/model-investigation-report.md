@@ -349,7 +349,7 @@ This is equivalent to a table of contents listing "Chapter 5: StemGNN Implementa
 
 ### **Original Claims vs Reality**
 - **README Claims**: 25+ neural forecasting models
-- **Actually Functional**: 2 confirmed working models (8% of claims)
+- **Actually Functional**: 2 confirmed working models (7% of claims)
 - **Broken Facades**: 2 sophisticated but non-functional models
 - **Missing/Fake**: 13+ models either missing or type aliases
 
