@@ -324,16 +324,10 @@ This is equivalent to a table of contents listing "Chapter 5: StemGNN Implementa
 
 #### **❌ BROKEN FACADES (2 models)**
 
-**DLinear**: 
-- ❌ Missing utility functions (`moving_average`, `create_windows`)
-- ❌ Explicit placeholder training code (lines 320-324)
-- ❌ Cannot compile due to missing dependencies
-- 📋 **Detailed Report**: `dlinear-verification-report.md`
+**DLinear**: Cannot compile due to missing dependencies  
+📋 **See: [DLinear Verification Report](./05-dlinear-verification-report.md) for detailed analysis**
 
-**MLP**: 
-- ❌ Missing utility functions (`create_scaler`, `create_windows`)
-- ❌ Same facade pattern as DLinear
-- ❌ Cannot compile due to missing dependencies
+**MLP**: Same facade pattern as DLinear with missing utility functions
 
 #### **🚨 FAKE IMPLEMENTATIONS (2 models)**
 

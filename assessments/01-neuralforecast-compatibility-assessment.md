@@ -106,20 +106,16 @@ pub fn predict_with_config(&self, _config: PredictionConfig) -> NeuroDivergentRe
 | **Transformers** | 8+ | AutoFormer, PatchTST, TimesNet |
 | **Specialized** | 8+ | DeepAR, AutoNHITS, etc. |
 
-#### **ruv-FANN Models (2 Actually Working)**
-| Category | Models Claimed | Actually Functional | Broken | Evidence |
-|----------|----------------|-------------------|---------|----------|
-| **Basic** | 4 models | 2 (NLinear, RNN) | 2 (DLinear, MLP) | Previous analysis |
-| **Recurrent** | 3 models | 1 (RNN) | 2 (LSTM, GRU are aliases) | [recurrent/mod.rs:23-24](https://github.com/ruvnet/ruv-FANN/blob/63af59126161a2084f1b283e7f455b04b714d382/neuro-divergent/neuro-divergent-models/src/recurrent/mod.rs#L23-L24) |
-| **Advanced** | 4+ models | 0 verified | Unknown | Not assessed yet |
-| **Transformers** | 6+ models | 0 verified | Unknown | Not assessed yet |
+#### **ruv-FANN Models (Limited Availability)**
+**Only 2 models verified as functional out of 25+ claimed models.**
 
-**Evidence - LSTM and GRU are fake:**
-```rust
-// Lines 23-24 in recurrent/mod.rs
-pub type LSTM<T> = RNN<T>;
-pub type GRU<T> = RNN<T>;
-```
+For detailed model implementation analysis including:
+- Complete breakdown by category
+- LSTM/GRU type alias issue
+- Verification methodology
+- Implementation quality assessment
+
+**See: [Model Implementation Verification Report](./02-model-investigation-report.md)**
 
 ### **📊 COMPATIBILITY MATRIX**
 

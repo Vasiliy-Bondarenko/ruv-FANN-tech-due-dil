@@ -27,10 +27,9 @@ The ruv-FANN codebase exhibits **three distinct implementation patterns**:
 
 ### **🚨 CONFIRMED FAKE IMPLEMENTATIONS (2 models)**
 
-| Model | Status | Evidence |
-|-------|--------|----------|
-| **LSTM** | ❌ **TYPE ALIAS** | `pub type LSTM<T> = RNN<T>;` in `recurrent/mod.rs:23` |
-| **GRU** | ❌ **TYPE ALIAS** | `pub type GRU<T> = RNN<T>;` in `recurrent/mod.rs:24` |
+LSTM and GRU are implemented as type aliases to RNN rather than distinct implementations.
+
+**See: [Model Implementation Verification Report](./02-model-investigation-report.md#fake-implementations) for detailed analysis**
 
 ### **⏳ PENDING VERIFICATION (11 models)**
 
@@ -88,16 +87,9 @@ The ruv-FANN codebase exhibits **three distinct implementation patterns**:
 ### **❌ BROKEN FACADE MODELS**
 
 #### **DLinear Model**
-**File**: `basic/dlinear.rs` (579 lines)  
 **Quality**: Facade (Cannot compile)
 
-**Critical Issues:**
-- ❌ Missing utility functions: `moving_average`, `create_windows`
-- ❌ Explicit placeholder training code (lines 320-324)
-- ❌ Tests validate trivial reconstruction, not forecasting
-- ❌ Will fail compilation due to missing imports
-
-**Detailed Report**: See `/dlinear-verification-report.md`
+**See: [DLinear Verification Report](./05-dlinear-verification-report.md) for comprehensive analysis**
 
 #### **MLP Model**
 **File**: `basic/mlp.rs`  
@@ -111,15 +103,7 @@ The ruv-FANN codebase exhibits **three distinct implementation patterns**:
 
 ### **🚨 FAKE IMPLEMENTATIONS**
 
-Both LSTM and GRU are **type aliases** to the RNN implementation:
-
-```rust
-// In recurrent/mod.rs:
-pub type LSTM<T> = RNN<T>;
-pub type GRU<T> = RNN<T>;
-```
-
-**Impact**: Users expecting LSTM/GRU-specific architectures will get basic RNN instead.
+**See: [Model Implementation Verification Report](./02-model-investigation-report.md#fake-implementations) for analysis of LSTM/GRU type aliases**
 
 ## 🎯 **PATTERNS IDENTIFIED**
 
